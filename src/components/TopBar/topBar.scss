@@ -1,0 +1,17 @@
+.top-bar{
+    width: 100%;
+    background-color: #ECE5DD;
+    height: 5%;
+
+    .left-side{
+        width: 30%;
+        height: 100%;
+        border-right: grey 1px solid;
+    
+        .profile-img{
+            border-radius: 50%;
+            height: 2rem;
+            margin: 7px 
+        }
+    }
+}
