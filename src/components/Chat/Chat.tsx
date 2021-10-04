@@ -14,22 +14,33 @@ const Chat = ({ messages, chatId }: Props) => {
 			return (
 				<div key={i} className="received msg">
 					<span>{msg.context}</span>
-					<span>{msg.time}</span>
+					<span className="sent-time">{msg.time}</span>
 				</div>
 			);
 		if (msg.type === "sent")
 			return (
 				<div key={i} className="sent msg">
 					<span>{msg.context}</span>
-					<span>{msg.time}</span>
+					<span className="sent-time">{msg.time}</span>
+					<img
+						className="seen"
+						src="https://img.icons8.com/color/48/000000/double-tick.png"
+						alt="seen"
+					/>
 				</div>
 			);
 	});
 
 	return (
-		<div className="chat-container">
-			<h1>{renderChat}</h1>
-		</div>
+		<>
+			<div className="chat-container">
+				<h2 className="start-date-chat">{messages[chatId]?.startChatDate}</h2>
+				{renderChat}
+			</div>
+			<div className="chat-input-bar">
+				<input type="text" />
+			</div>
+		</>
 	);
 };
 export default Chat;

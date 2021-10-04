@@ -11,7 +11,7 @@ export const mockContactList: ContactList[] = [
 		id: "d21dsd12f",
 		name: "Paul",
 		img: "https://i.pinimg.com/originals/6b/1c/7d/6b1c7dd7a181dc908d29de18ad413aa3.jpg",
-		lastMessage: "16:32",
+		lastMessage: "06:42",
 	},
 	{
 		id: "dasrafdwc",
@@ -35,13 +35,13 @@ export const mockContactList: ContactList[] = [
 		id: "kdsad3w",
 		name: "Kurt ",
 		img: "https://i.pinimg.com/736x/da/74/c0/da74c06bc0463fb45f7cfbb2143630a8.jpg",
-		lastMessage: "08:42",
+		lastMessage: "09:11",
 	},
 ];
 
 export const mockMessages: Messages = {
 	kdsad3w: {
-		firstMessage: "22 JANUARY 2015",
+		startChatDate: "22 JANUARY 2015",
 		msgArr: [
 			{
 				context: "bye",
@@ -60,14 +60,14 @@ export const mockMessages: Messages = {
 			},
 			{
 				context: "lol",
-				time: "06:42",
+				time: "09:11",
 				type: "received",
 			},
 		],
 	},
 
 	dsad2dsa1d: {
-		firstMessage: "22 JANUARY 2015",
+		startChatDate: "25 SEPTEMBER 2017",
 		msgArr: [
 			{
 				context: "hi bro",
@@ -92,7 +92,7 @@ export const mockMessages: Messages = {
 		],
 	},
 	dsad21dwqd: {
-		firstMessage: "22 JANUARY 2015",
+		startChatDate: "11 OCTOBER 2014",
 		msgArr: [
 			{
 				context: "are u there?",
@@ -117,7 +117,7 @@ export const mockMessages: Messages = {
 		],
 	},
 	dasrafdwc: {
-		firstMessage: "22 JANUARY 2015",
+		startChatDate: "06 AUGUST 2021",
 		msgArr: [
 			{
 				context: "hey",
@@ -142,7 +142,7 @@ export const mockMessages: Messages = {
 		],
 	},
 	d21dsd12f: {
-		firstMessage: "22 JANUARY 2015",
+		startChatDate: "28 JULY 2020",
 		msgArr: [
 			{
 				context: "hello",
@@ -161,7 +161,7 @@ export const mockMessages: Messages = {
 			},
 			{
 				context: "ok i need to go",
-				time: "06:42",
+				time: "10:11",
 				type: "received",
 			},
 		],

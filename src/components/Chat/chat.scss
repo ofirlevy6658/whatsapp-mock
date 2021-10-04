@@ -4,25 +4,62 @@
     width: 70%;
     display: flex;
     flex-direction:column;
-    align-content: flex-end;
+    justify-content: end;
+    height: 85%;
+    
+    .start-date-chat{
+        margin: 0 auto;
+        background-color: #34B7F1;
+        padding: 7px 10px;
+        border-radius: 5px;
+    }
     .msg{
         margin-top: 15px;
         width: 35%;
         border-radius: 5px;
-        height: 35px;
+        font-size: 1.2rem;
+        padding: 7px 10px;
         vertical-align: middle;
-        line-height: 35px;
+        position: relative;
     }
     .sent{
         background-color: #dcf8c6;
         margin-left:  auto;
         margin-right: 0;
+        
     }
     
     .received{
         background-color: #ffffff;
     }
-    span{
-        margin-left: 7.5px;
+
+    .sent-time{
+        padding: 5px;
+        float: right;
+        color: #B0B0B0;
+        font-size: 0.7rem;
+        position: absolute;
+        bottom: 0;
+        right: 1rem;
+    }
+    .seen{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 1rem;
+    }    
+}
+
+.chat-input-bar{
+    background-color: #E8E8E8;
+    width: 100%;
+    height: calc(15% - 45px); 
+    
+    input{
+        display: block;
+        width: 80%;
+        padding: 5px 20px;
+        border-radius: 5px;
+        border: 1px solid #ffffff;
     }
 }

@@ -14,7 +14,7 @@ const ChatList = ({ contactList, selectedChat }: Props) => {
 			<div
 				// style={{ backgroundColor: isSelected ? "grey" : "white" }}
 				key={contact.id}
-				className="contact-card"
+				className={isSelected ? "contact-card color" : "contact-card"}
 				onClick={() => {
 					setIsSelected(!isSelected);
 					selectedChat(contact.id);

@@ -15,7 +15,7 @@ type MsgStatus = "received" | "sent";
 
 export interface Messages {
 	[key: string]: {
-		firstMessage: string;
+		startChatDate: string;
 		msgArr: {
 			context: string;
 			time: string;
