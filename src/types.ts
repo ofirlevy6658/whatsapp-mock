@@ -8,21 +8,18 @@ export interface ContactList {
 	id: string;
 	name: string;
 	img: string;
+	lastMessage: string;
 }
+
+type MsgStatus = "received" | "sent";
 
 export interface Messages {
 	[key: string]: {
 		firstMessage: string;
-		lastMessage: string;
-		incomeMsg: {
+		msgArr: {
 			context: string;
 			time: string;
-			seen: true;
-		}[];
-		outputMsg: {
-			context: string;
-			time: string;
-			seen: true;
+			type: MsgStatus;
 		}[];
 	};
 }
