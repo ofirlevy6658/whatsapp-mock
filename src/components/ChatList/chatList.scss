@@ -1,0 +1,45 @@
+.chat-container{
+    width: 40%;
+    border: grey solid 1px;
+    
+    .search-bar{
+        border-radius: 7px;
+        width: 60%;
+        display: block;
+        margin:auto;
+        height: 1.3rem;
+    }
+
+
+    input::placeholder{
+        text-align: center;
+    }
+    .contact-card{
+        border-top: grey 1px solid;
+        height: 60px;
+        display: flex;
+        justify-content:space-between;
+        .left{
+            display: flex;
+        }
+        .contact-details{
+            align-self: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .right{
+            align-self: center;
+            margin-right: 10px;
+        }
+
+
+        img{ 
+            align-self: center;
+            border-radius: 50%;
+            margin: 5px;
+            height: 2rem;
+        }
+    }
+}

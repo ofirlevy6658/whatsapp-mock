@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.scss";
 import TopBar from "./components/TopBar/TopBar";
+import ChatList from "./components/ChatList/ChatList";
 import { User, ContactList } from "./types";
 import { mockUser, mockContactList } from "./mockData";
 
@@ -20,6 +21,7 @@ function App() {
 	return (
 		<div className="container">
 			{user && contactList && <TopBar user={user} contactList={contactList} />}
+			{contactList && <ChatList contactList={contactList} />}
 		</div>
 	);
 }
