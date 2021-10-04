@@ -12,7 +12,7 @@ const ChatList = ({ contactList, selectedChat }: Props) => {
 	const renderContactList = contactList.map((contact) => {
 		return (
 			<div
-				// style={{ backgroundColor	: isSelected ? "grey" : "white" }}
+				// style={{ backgroundColor: isSelected ? "grey" : "white" }}
 				key={contact.id}
 				className="contact-card"
 				onClick={() => {

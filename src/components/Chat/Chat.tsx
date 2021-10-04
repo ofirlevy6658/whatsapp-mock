@@ -12,14 +12,14 @@ const Chat = ({ messages, chatId }: Props) => {
 	const renderChat = messages[chatId]?.msgArr.map((msg, i) => {
 		if (msg.type === "received")
 			return (
-				<div key={i} className="received-msg">
+				<div key={i} className="received msg">
 					<span>{msg.context}</span>
 					<span>{msg.time}</span>
 				</div>
 			);
 		if (msg.type === "sent")
 			return (
-				<div key={i} className="sent-msg">
+				<div key={i} className="sent msg">
 					<span>{msg.context}</span>
 					<span>{msg.time}</span>
 				</div>
