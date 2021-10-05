@@ -9,6 +9,7 @@ export interface ContactList {
 	name: string;
 	img: string;
 	lastMessage: string;
+	lastMessageTime: string;
 }
 
 type MsgStatus = "received" | "sent";

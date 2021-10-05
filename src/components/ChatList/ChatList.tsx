@@ -28,12 +28,12 @@ const ChatList = ({ contactList, selectedChat }: Props) => {
 				<div className="left">
 					<img src={contact.img} alt="contact-img" />
 					<div className="contact-details">
-						<span>{contact.name}</span>
-						<span>hi its me</span>
+						<span className="contact-name">{contact.name}</span>
+						<span className="last-msg">{contact.lastMessage}</span>
 					</div>
 				</div>
 				<div className="right">
-					<span>{contact.lastMessage}</span>
+					<span className="last-msg">{contact.lastMessageTime}</span>
 				</div>
 			</div>
 		);

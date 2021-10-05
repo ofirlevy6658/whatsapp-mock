@@ -24,8 +24,11 @@ const TopBar = ({ user, chat }: Props) => {
 				</div>
 			</div>
 			<div className="right-side">
-				{chat?.img ? (
-					<img className="profile-img" src={chat.img} alt="profile-img" />
+				{chat ? (
+					<div>
+						<img className="profile-img" src={chat.img} alt="profile-img" />
+						<span>{chat.name}</span>
+					</div>
 				) : (
 					<div></div>
 				)}

@@ -1,5 +1,5 @@
 .chat-list-container{
-    border: grey solid 1px;
+    border-bottom: #A9A9A9 solid 1px;
     cursor: pointer;
     .search-bar{
         border-radius: 7px;
@@ -8,20 +8,20 @@
         display: block;
         margin: 7.5px auto;
         height: 1.3rem;
-        border: 1px solid grey;
+        border: 1px solid #A9A9A9;
     }
-
 
     input::placeholder{
         text-align: center;
     }
     .contact-card{
-        border-top: grey 1px solid;
+        border-top: #A9A9A9 1px solid;
         height: 60px;
         display: flex;
         justify-content:space-between;
         .left{
             display: flex;
+
         }
         .contact-details{
             align-self: center;
@@ -34,7 +34,10 @@
             align-self: center;
             margin-right: 10px;
         }
-
+        .last-msg{
+            color:#A9A9A9;
+            font-size: 0.8rem;
+        }
 
         img{ 
             align-self: center;
