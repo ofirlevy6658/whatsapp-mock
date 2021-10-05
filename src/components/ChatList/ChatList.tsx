@@ -9,7 +9,12 @@ interface Props {
 
 const ChatList = ({ contactList, selectedChat }: Props) => {
 	const [isSelected, setIsSelected] = useState(false);
+	const [searchValue, setSearchValue] = useState("");
+
 	const renderContactList = contactList.map((contact) => {
+		if (!contact.name.toLowerCase().startsWith(searchValue.toLowerCase()))
+			return;
+
 		return (
 			<div
 				// style={{ backgroundColor: isSelected ? "grey" : "white" }}
@@ -40,6 +45,8 @@ const ChatList = ({ contactList, selectedChat }: Props) => {
 				className="search-bar"
 				placeholder="Search or start new chat"
 				type="text"
+				value={searchValue}
+				onChange={(e) => setSearchValue(e.currentTarget.value)}
 			/>
 			{renderContactList}
 		</div>
