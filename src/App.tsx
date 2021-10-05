@@ -13,8 +13,9 @@ function App() {
 	const [contactList, setContactList] = useState<ContactList[] | undefined>(
 		undefined
 	);
+	const [selectedChat, setSelectedChat] = useState<User | undefined>(undefined);
 	const [messages, setMessages] = useState<Messages | undefined>(undefined);
-	const [selectedChat, setSelectedChat] = useState("");
+	const [selectedChatId, setSelectedChatId] = useState("");
 
 	useEffect(() => {
 		setUser(mockUser);
@@ -23,12 +24,16 @@ function App() {
 	}, []);
 
 	const selectedChatHandle = (chatId: string) => {
-		setSelectedChat(chatId);
+		setSelectedChatId(chatId);
+		const findSelectedChat = contactList?.find(
+			(contact) => contact.id === chatId
+		);
+		setSelectedChat(findSelectedChat);
 	};
 
 	return (
 		<div className="container">
-			{user && contactList && <TopBar user={user} contactList={contactList} />}
+			{user && contactList && <TopBar user={user} chat={selectedChat} />}
 			<div className="chat-list-page">
 				{contactList && (
 					<ChatList
@@ -38,7 +43,7 @@ function App() {
 				)}
 			</div>
 			<div className="chat-page">
-				{messages && <Chat messages={messages} chatId={selectedChat} />}
+				{messages && <Chat messages={messages} chatId={selectedChatId} />}
 			</div>
 		</div>
 	);
