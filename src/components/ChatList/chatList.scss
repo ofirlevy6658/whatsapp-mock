@@ -1,5 +1,4 @@
 .chat-list-container {
-	border-bottom: #a9a9a9 solid 1px;
 	cursor: pointer;
 	.search-bar {
 		border-radius: 7px;
@@ -15,10 +14,11 @@
 		text-align: center;
 	}
 	.selected {
-		background-color: #dcdcdc;
+		background-color: #ebebeb;
 	}
 	.contact-card {
-		border-top: #a9a9a9 1px solid;
+		border-top: #ebebeb 1px solid;
+
 		height: 60px;
 		display: flex;
 		justify-content: space-between;
@@ -40,7 +40,6 @@
 			color: #a9a9a9;
 			font-size: 0.8rem;
 		}
-
 		img {
 			align-self: center;
 			border-radius: 50%;

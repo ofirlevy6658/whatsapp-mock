@@ -50,7 +50,9 @@ const Chat = ({
 						onClick={backToMobileChat}
 					/>
 				)}
-				<h2 className="start-date-chat">{messages[chatId]?.startChatDate}</h2>
+				<span className="start-date-chat">
+					{messages[chatId]?.startChatDate}
+				</span>
 				{renderChat}
 			</div>
 			<div className="chat-input-bar">

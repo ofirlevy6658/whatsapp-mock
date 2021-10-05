@@ -10,7 +10,7 @@
 
 	.start-date-chat {
 		margin: 0 auto;
-		background-color: #34b7f1;
+		background-color: #e0f3fa;
 		padding: 7px 10px;
 		border-radius: 5px;
 	}
@@ -52,7 +52,7 @@
 
 .chat-input-bar {
 	margin-top: 10px;
-	background-color: #e8e8e8;
+	background-color: #ededed;
 	width: 100%;
 	height: calc(12.5% - 45px);
 	display: flex;
@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 600px) {
 	.chat-container {
-		font-family: Helvetica;
+		font-family: Segoe UI;
 		background-color: #ece5dd;
 		height: 95vh;
 		width: 100vw;
