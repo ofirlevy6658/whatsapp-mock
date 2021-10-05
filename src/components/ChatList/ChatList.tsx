@@ -8,20 +8,20 @@ interface Props {
 }
 
 const ChatList = ({ contactList, selectedChat }: Props) => {
-	const [isSelected, setIsSelected] = useState(false);
+	const [isSelected, setIsSelected] = useState("");
 	const [searchValue, setSearchValue] = useState("");
 
 	const renderContactList = contactList.map((contact) => {
 		if (!contact.name.toLowerCase().startsWith(searchValue.toLowerCase()))
-			return;
-
+			return null;
 		return (
 			<div
-				// style={{ backgroundColor: isSelected ? "grey" : "white" }}
 				key={contact.id}
-				className={isSelected ? "contact-card color" : "contact-card"}
+				className={
+					isSelected === contact.id ? "contact-card selected" : "contact-card"
+				}
 				onClick={() => {
-					setIsSelected(!isSelected);
+					setIsSelected(contact.id);
 					selectedChat(contact.id);
 				}}
 			>

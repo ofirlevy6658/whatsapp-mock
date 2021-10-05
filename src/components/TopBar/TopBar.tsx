@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./topBar.scss";
 import { User } from "../../types";
 

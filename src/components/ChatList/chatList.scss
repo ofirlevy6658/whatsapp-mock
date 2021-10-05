@@ -1,49 +1,51 @@
-.chat-list-container{
-    border-bottom: #A9A9A9 solid 1px;
-    cursor: pointer;
-    .search-bar{
-        border-radius: 7px;
-        padding: 7px;
-        width: 60%;
-        display: block;
-        margin: 7.5px auto;
-        height: 1.3rem;
-        border: 1px solid #A9A9A9;
-    }
+.chat-list-container {
+	border-bottom: #a9a9a9 solid 1px;
+	cursor: pointer;
+	.search-bar {
+		border-radius: 7px;
+		padding: 7px;
+		width: 60%;
+		display: block;
+		margin: 7.5px auto;
+		height: 1.3rem;
+		border: 1px solid #a9a9a9;
+	}
 
-    input::placeholder{
-        text-align: center;
-    }
-    .contact-card{
-        border-top: #A9A9A9 1px solid;
-        height: 60px;
-        display: flex;
-        justify-content:space-between;
-        .left{
-            display: flex;
+	input::placeholder {
+		text-align: center;
+	}
+	.selected {
+		background-color: #dcdcdc;
+	}
+	.contact-card {
+		border-top: #a9a9a9 1px solid;
+		height: 60px;
+		display: flex;
+		justify-content: space-between;
+		.left {
+			display: flex;
+		}
+		.contact-details {
+			align-self: center;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+		}
+		.right {
+			align-self: center;
+			margin-right: 10px;
+		}
+		.last-msg {
+			color: #a9a9a9;
+			font-size: 0.8rem;
+		}
 
-        }
-        .contact-details{
-            align-self: center;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        .right{
-            align-self: center;
-            margin-right: 10px;
-        }
-        .last-msg{
-            color:#A9A9A9;
-            font-size: 0.8rem;
-        }
-
-        img{ 
-            align-self: center;
-            border-radius: 50%;
-            margin: 5px;
-            height: 2rem;
-        }
-    }
+		img {
+			align-self: center;
+			border-radius: 50%;
+			margin: 5px;
+			height: 2rem;
+		}
+	}
 }

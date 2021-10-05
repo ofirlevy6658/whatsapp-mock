@@ -7,11 +7,7 @@
 	justify-content: end;
 	height: 87.5%;
 	position: relative;
-	.back {
-		width: 30px;
-		position: absolute;
-		top: 70px;
-	}
+
 	.start-date-chat {
 		margin: 0 auto;
 		background-color: #34b7f1;
@@ -80,9 +76,14 @@
 	.chat-container {
 		font-family: Helvetica;
 		background-color: #ece5dd;
-		height: 100vh;
+		height: 95vh;
 		width: 100vw;
-
+		margin: 0;
+		.back {
+			width: 30px;
+			position: absolute;
+			top: 70px;
+		}
 		.msg {
 			font-size: 1rem;
 			padding: 7px 10px;
@@ -100,7 +101,7 @@
 	}
 	.chat-input-bar {
 		margin-top: 0px;
-		height: calc(12.5% - 45px);
+		height: 5vh;
 		display: flex;
 		input {
 			width: 60%;
