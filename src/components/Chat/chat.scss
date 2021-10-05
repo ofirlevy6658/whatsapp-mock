@@ -5,7 +5,7 @@
     display: flex;
     flex-direction:column;
     justify-content: end;
-    height: 85%;
+    height: 87.5%;
     
     .start-date-chat{
         margin: 0 auto;
@@ -51,15 +51,23 @@
 }
 
 .chat-input-bar{
+    margin-top: 10px ;
     background-color: #E8E8E8;
     width: 100%;
-    height: calc(15% - 45px); 
-    
+    height: calc(12.5% - 45px); 
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
     input{
         display: block;
         width: 80%;
-        padding: 5px 20px;
+        padding: 12.5px 0;
         border-radius: 5px;
         border: 1px solid #ffffff;
+    }
+
+    .icon{
+        display: block;
+        height: 30px;
     }
 }
