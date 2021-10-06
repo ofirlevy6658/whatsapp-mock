@@ -12,6 +12,7 @@ export interface ContactList {
 	lastMessageTime: string;
 }
 
+// CR: use TS enums instead of raw strings
 type MsgStatus = "received" | "sent";
 
 export interface Messages {
