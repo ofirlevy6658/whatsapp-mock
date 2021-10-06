@@ -9,6 +9,7 @@ import { mockUser, mockContactList, mockMessages } from "./mockData";
 import "./App.scss";
 import "./reset.scss";
 
+// CR: use a seperate container component for the page (eg. MessagesPage), do not put logic in App.tsx. It should be used only for bootstrapping
 function App() {
 	const [width, setWidth] = useState(window.innerWidth);
 	const [user, setUser] = useState<User | undefined>(undefined);
@@ -37,8 +38,10 @@ function App() {
 		setSelectedChat(findSelectedChat);
 	};
 	const backToMobileChat = () => setSelectedChat(undefined);
-
+	
+	// CR: do not hardcode numbers, use CONST
 	if (width > 500) {
+		// CR: extract this JSX to a seperate component called "DesktopChatView"
 		return (
 			<div className="container">
 				{user && contactList && <TopBar user={user} chat={selectedChat} />}
@@ -56,6 +59,7 @@ function App() {
 			</div>
 		);
 	} else {
+		// CR: extract this JSX to a seperate component called "MobileChatView"
 		return (
 			<>
 				{!selectedChat && contactList && (
