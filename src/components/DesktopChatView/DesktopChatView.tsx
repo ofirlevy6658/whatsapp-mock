@@ -2,16 +2,17 @@ import React from "react";
 import TopBar from "../TopBar/TopBar";
 import ChatList from "../ChatList/ChatList";
 import Chat from "../Chat/Chat";
+import { User, ContactList, Messages } from "../../types";
 
 import "./desktopChatView.scss";
 
 interface Props {
-	user: any;
+	user: User | undefined;
 	selectedChat: any;
-	contactList: any;
-	selectedChatHandle: any;
-	messages: any;
-	chatId: any;
+	contactList: ContactList[] | undefined;
+	selectedChatHandle: (id: string) => void;
+	messages: Messages | undefined;
+	chatId: string;
 }
 
 const DesktopChatView = ({
