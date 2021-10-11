@@ -1,34 +1,34 @@
 .chat-container {
-	margin: 0 auto;
-	margin-top: 35px;
-	width: 70%;
+	height: 85vh;
+	border: 60vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
-	height: 87.5%;
 	position: relative;
-
+	background-color: #ece5dd;
+	padding-bottom: 35px;
 	.start-date-chat {
-		margin: 0 auto;
 		background-color: #e0f3fa;
 		padding: 7px 10px;
 		border-radius: 5px;
+		margin: 0 auto;
 	}
 	.msg {
-		margin-top: 15px;
-		width: 50%;
+		margin-top: 4px;
+		width: 20%;
 		border-radius: 5px;
 		padding: 7px 10px;
 		vertical-align: middle;
 		position: relative;
 	}
 	.sent {
+		margin-right: 15%;
 		background-color: #dcf8c6;
 		margin-left: auto;
-		margin-right: 0;
 	}
 
 	.received {
+		margin-left: 15%;
 		background-color: #ffffff;
 	}
 
@@ -50,10 +50,8 @@
 }
 
 .chat-input-bar {
-	margin-top: 10px;
 	background-color: #ededed;
-	width: 100%;
-	height: calc(12.5% - 45px);
+	height: calc(10vh);
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
