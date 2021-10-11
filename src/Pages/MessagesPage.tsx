@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Chat from "../components/Chat/Chat";
-import MobileChatList from "../components/MobileChat/MobileChatList";
 import DesktopChatView from "../components/DesktopChatView/DesktopChatView";
+import MobileChatView from "../components/MobileChatView/MobileChatView";
 import { User, ContactList, Messages } from "../types";
 import { mockUser, mockContactList, mockMessages } from "../mockData";
 
@@ -14,7 +13,7 @@ export const MessagesPage = () => {
 	const [selectedChat, setSelectedChat] = useState<User | undefined>(undefined);
 	const [messages, setMessages] = useState<Messages | undefined>(undefined);
 	const [selectedChatId, setSelectedChatId] = useState("");
-	const mobileScreenSize = 500;
+	const isMobile = width < 600;
 	useEffect(() => {
 		setUser(mockUser);
 		setContactList(mockContactList);
@@ -33,8 +32,8 @@ export const MessagesPage = () => {
 		setSelectedChat(findSelectedChat);
 	};
 	const backToMobileChat = () => setSelectedChat(undefined);
-
-	if (width > mobileScreenSize) {
+	console.log(isMobile);
+	if (!isMobile) {
 		return (
 			<>
 				<DesktopChatView
@@ -50,20 +49,14 @@ export const MessagesPage = () => {
 	} else {
 		return (
 			<>
-				{!selectedChat && contactList && (
-					<MobileChatList
-						contactList={contactList}
-						selectedChat={selectedChatHandle}
-					/>
-				)}
-				{selectedChat && messages && (
-					<Chat
-						enableBackBtn
-						messages={messages}
-						chatId={selectedChatId}
-						backToMobileChat={backToMobileChat}
-					/>
-				)}
+				<MobileChatView
+					selectedChat={!!selectedChat}
+					contactList={contactList}
+					selectedChatHandle={selectedChatHandle}
+					messages={messages}
+					selectedChatId={selectedChatId}
+					backToMobileChat={backToMobileChat}
+				/>
 			</>
 		);
 	}
